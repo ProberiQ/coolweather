@@ -1,5 +1,7 @@
 package com.coolweather.wxg.coolweather.util;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -30,6 +32,7 @@ public class HttpUtil {
                 }
                 if(listener != null){
                     listener.onFinish(response.toString());
+                    Log.d("TAG",response.toString());
                 }
 
             }catch (Exception e){
